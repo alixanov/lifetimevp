@@ -10,16 +10,16 @@ body {
      display: flex;
      flex-direction: column;
      font-family: 'Arial', sans-serif;
-     background: linear-gradient(135deg, black, black);
      /* overflow: hidden; */
      scroll-behavior: smooth;
+
 }
 
 .container {
      width: 100%;
      display: flex;
      flex-direction: column;
-     padding: 0 20px;
+     background-color: black;
 }
 
 .header__container {
@@ -28,6 +28,8 @@ body {
      flex-direction: column;
      align-items: center;
      padding: 20px;
+     background-color:black;
+
 }
 
 .logo__container {
@@ -90,6 +92,12 @@ body {
      backdrop-filter: blur(10px);
      animation: slideInLeft 1s ease;
      margin-top: -20px;
+     display: flex;
+     align-items: start;
+     text-align: start;
+     flex-direction: column;
+     gap: 5px;
+     
 }
 .form__navbar {
      display: flex;
@@ -171,6 +179,13 @@ body {
      margin-top: 20px;
 }
 
+.moree__info {
+     width: 100%;
+     display: flex;
+     text-align: center;
+     align-items:center ;
+     justify-content: center;
+}
 .moree__info p {
      color: white;
      font-size: 16px;
@@ -293,6 +308,6 @@ body {
           width: 200px;
 right: 0;
 position: absolute;
-top: 800px;
+top: 840px;
      }
 }

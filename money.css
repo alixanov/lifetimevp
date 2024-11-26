@@ -1,13 +1,13 @@
-.money__container {
+.money__big-container {
      width: 100%;
+     background-color: white;
+}
+.money__container {
+     width: 97%;
      /* max-width: 600px; */
      text-align: center;
      padding: 30px;
-     background: rgba(255, 255, 255, 0.1);
-     /* Полупрозрачный фон */
-     border: 2px solid #FF469D;
-     border-radius: 20px;
-     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+          background-color: #040029;     /* Полупрозрачный фон */
      transform: scale(0.8);
      opacity: 0;
      animation: fadeInScale 1.2s ease forwards;
