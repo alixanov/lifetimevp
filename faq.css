@@ -34,7 +34,6 @@
      width: 100%;
      /* Адаптируется для мобильных */
 }
-
 .faq__box {
      width: 100%;
      /* Динамическая ширина */
@@ -45,20 +44,46 @@
      align-items: center;
      justify-content: center;
      flex-direction: column;
-     background: linear-gradient(135deg, white, #ffc3df);
-     border: solid 3px #FF469D;
+     background: linear-gradient(135deg, white, #f8d7e0);
+     /* Слегка нежный розовый */
+     border: solid 2px #FF469D;
+     /* Уменьшена толщина границы */
      border-radius: 8px;
-     color: #1C1C1E;
+     color: #333;
+     /* Более темный текст для контраста */
      text-align: center;
      font-size: 16px;
      line-height: 1.4;
      opacity: 0;
      transform: translateY(50px);
      animation: fadeInUp 0.6s ease forwards;
+     cursor: pointer;
 }
+
 .faq__box:hover {
-          background: linear-gradient(135deg, white, #ff9dcb);
-               box-shadow: 0 5px 10px rgba(255, 70, 157, 0.4);
+     background: linear-gradient(135deg, #f9f9f9, #f8d7e0);
+     /* Легкий градиент на фоне */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     /* Слабая тень для современности */
+     transition: background 0.3s ease, box-shadow 0.3s ease;
+     /* Плавные переходы */
+}
+
+.faq__box:active {
+     transform: translateY(2px);
+     /* Легкое смещение при нажатии */
+}
+/* Анимация появления */
+@keyframes fadeInUp {
+     0% {
+          opacity: 0;
+          transform: translateY(50px);
+     }
+
+     100% {
+          opacity: 1;
+          transform: translateY(0);
+     }
 }
 
 /* Медиазапросы */
