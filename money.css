@@ -1,24 +1,6 @@
-* {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
-     text-decoration: none;
-}
-
-body {
-     height: 100vh;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     background: linear-gradient(135deg, #1C1C1E, #FF469D);
-     font-family: 'Arial', sans-serif;
-     color: white;
-     overflow-x: hidden;
-}
-
 .money__container {
-     width: 80%;
-     max-width: 600px;
+     width: 100%;
+     /* max-width: 600px; */
      text-align: center;
      padding: 30px;
      background: rgba(255, 255, 255, 0.1);
@@ -29,6 +11,8 @@ body {
      transform: scale(0.8);
      opacity: 0;
      animation: fadeInScale 1.2s ease forwards;
+     margin: 20px auto;
+     /* Для центрирования */
 }
 
 .money__container p {
@@ -93,5 +77,56 @@ body {
 
      100% {
           text-shadow: 0 0 10px #4DEA03, 0 0 20px #4DEA03, 0 0 30px #4DEA03;
+     }
+}
+
+/* Медиазапросы */
+
+/* Для экранов 1024px и меньше */
+@media screen and (max-width: 1024px) {
+     .money__container {
+          width: 90%;
+          padding: 20px;
+     }
+
+     .money__container p {
+          font-size: 22px;
+     }
+
+     .money__container span {
+          font-size: 15px;
+     }
+}
+
+/* Для экранов 768px и меньше */
+@media screen and (max-width: 768px) {
+     .money__container {
+          width: 95%;
+          padding: 15px;
+     }
+
+     .money__container p {
+          font-size: 20px;
+     }
+
+     .money__container span {
+          font-size: 14px;
+     }
+}
+
+/* Для экранов 480px и меньше */
+@media screen and (max-width: 480px) {
+     .money__container {
+          width: 85%;
+          padding: 20px;
+          border-radius: 15px;
+     }
+
+     .money__container p {
+          font-size: 18px;
+     }
+
+     .money__container span {
+          font-size: 13px;
      }
 }

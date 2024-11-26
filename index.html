@@ -6,6 +6,11 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Document</title>
      <link rel="stylesheet" href="./style.css">
+     <link rel="stylesheet" href="./features.css">
+     <link rel="stylesheet" href="./product.css">
+     <link rel="stylesheet" href="./faq.css">
+     <link rel="stylesheet" href="./money.css">
+     <link rel="stylesheet" href="./contact.css">
 </head>
 
 <body>
@@ -16,11 +21,11 @@
                     <p>LIFETIME VPN <br> FOR AMNEZIA APP</p>
                </div>
                <div class="navbar__container">
-                    <a href="./features.html">Преимущества</a>
-                    <a href="./product.html">Продукт</a>
-                    <a href="./faq.html">FAQ</a>
-                    <a href="./money.html">Заработать</a>
-                    <a href="./contact.html" >Контакты</a>
+<a href="#features" class="scroll-link">Преимущества</a>
+                    <a href="#product" class="scroll-link">Продукт</a>
+                    <a href="#faq" class="scroll-link">FAQ</a>
+                    <a href="#money" class="scroll-link">Заработать</a>
+                    <a href="#contact" class="scroll-link" >Контакты</a>
                </div>
                <div class="form__container">
                     <form class="registration__card">
@@ -53,7 +58,113 @@
                     </div>
                </div>
           </div>
+
+     <div class="features__container" id="features">
+          <div class="features__card">
+               <p>Высокая скорость для стабильного соединения
+                    <span>300 MB/s</span>
+               </p>
+               <div class="features__title">
+                    <img src="./img//photo_2024-11-26_15-43-49 (4).jpg" alt="">
+     
+               </div>
+          </div>
+     
+          <div class="features__ad-card">
+               <p>Доступно на различных платформах</p>
+               <img src="./img/photo_2024-11-26_15-43-49 (3).jpg" alt="">
+               <div class="features__btn">
+                    <button>IOS</button>
+                    <button>Android</button>
+                    <button>Windows</button>
+               </div>
+          </div>
+     </div>
+
+
+     <div class="product__container" id="product">
+          <div class="product__title">
+               <p>VPN туннелирование для тех <br> кто заботится о своей безопасности</p>
+     
+          </div>
+          <span>
+               VLESS самый совершенный и перспективный на сегодняшний день протокол шифрования созданный китайскими
+               умельцами. Работает
+               поверх TLS, искуссно маскируясь под обращение к какому-нибудь стороннему веб-сайту.
+               <br>
+               Покуая наш продукт, вы получаете
+               специальную ссылку-доступ, которую можете использовать в любом OPEN VPN приложении. Мы рекомендуем
+               использовать
+               WireGuard или Amnezia VPN, эти VLESS клиентские приложения регулярно обновляются и вы всегда сможете
+               качественный
+               продукт.
+          </span>
+     </div>
+
+       
+     <div class="faq__container"
+     id="faq"
+     >
+          <img src="./img/photo_2024-11-26_15-43-49 (2).jpg" alt="">
+          <div class="faq__card">
+               <div class="faq__box">
+                    <p>Адаптируемые имитации сообщений</p>
+               </div>
+               <div class="faq__box">
+                    <p>Адаптируемые имитации сообщений</p>
+               </div>
+               <div class="faq__box">
+                    <p>Адаптируемые имитации сообщений</p>
+               </div>
+               <div class="faq__box">
+                    <p>Адаптируемые имитации сообщений</p>
+               </div>
+               <div class="faq__box">
+                    <p>Адаптируемые имитации сообщений более длинный текст</p>
+               </div>
+               <div class="faq__box">
+                    <p>Адаптируемые имитации сообщений более длинный текст еще более длинный текст</p>
+               </div>
+          </div>
+     </div>
+
+
+     <div class="money__container" id="money">
+          <p>Приглашай друзей и зарабатывай!</p>
+          <span>Регистрируйся в Партнерской программе и получай стабильный доход от привлеченных пользователей.</span>
+          <span>Мы платим % от каждой покупки ваших друзей.</span>
+     </div>
+
+<div class="contact__container" id="contact">
+     <div class="contact__card">
+          <p style="color: white; font-size: 20px;">Свяжитесь с нами: support@example.com</p>
+     </div>
+     <div class="contact__box">
+          <div class="contact__social">
+               <img src="icon-facebook.svg" alt="Facebook" width="24" height="24">
+          </div>
+          <div class="contact__social">
+               <img src="icon-twitter.svg" alt="Twitter" width="24" height="24">
+          </div>
+          <div class="contact__social">
+               <img src="icon-instagram.svg" alt="Instagram" width="24" height="24">
+          </div>
+     </div>
+</div>
+
      </div>
 </body>
+<script>
+     document.querySelectorAll('.scroll-link').forEach(link => {
+          link.addEventListener('click', function (e) {
+               e.preventDefault(); // Предотвращает стандартное поведение ссылки
+               const targetId = this.getAttribute('href').substring(1); // Получаем id блока
+               const targetElement = document.getElementById(targetId);
+               if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+               }
+          });
+     });
+</script>
 
 </html>

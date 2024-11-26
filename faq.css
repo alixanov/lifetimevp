@@ -1,35 +1,22 @@
-* {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
-     text-decoration: none;
-}
-
-body {
-     height: 100vh;
-     display: flex;
-     flex-direction: column;
-     /* background: linear-gradient(135deg, #1C1C1E, #FF469D); */
-     background-color: black;
-     font-family: Arial, sans-serif;
-     color: white;
-     overflow-x: hidden;
-     /* Чтобы избежать горизонтального скролла */
-}
-
 .faq__container {
-     height: 100vh;
+     height: auto;
+     /* Для адаптации на небольших экранах */
      display: flex;
+     /* flex-wrap: wrap; */
+     /* Разрешает перенос содержимого */
      align-items: center;
      justify-content: center;
      gap: 20px;
      padding: 20px;
-     position: relative;
-     overflow: hidden;
+     /* position: relative;
+     overflow: hidden; */
 }
 
 .faq__container img {
-     max-width: 50%;
+     max-width: 100%;
+     /* Уменьшается для мобильных */
+     height: auto;
+     /* Сохраняет пропорции */
      border-radius: 15px;
      object-fit: cover;
      opacity: 0;
@@ -39,20 +26,25 @@ body {
 
 .faq__card {
      display: flex;
+     flex-direction: column;
      align-items: center;
      justify-content: center;
-     flex-direction: column;
      gap: 22px;
+     width: 100%;
+     /* Адаптируется для мобильных */
 }
 
 .faq__box {
-     width: 500px;
+     width: 100%;
+     /* Динамическая ширина */
+     max-width: 500px;
+     /* Максимальная ширина */
      min-height: 50px;
      display: flex;
      align-items: center;
      justify-content: center;
      flex-direction: column;
-background: linear-gradient(135deg, white, #ffc3df);
+     background: linear-gradient(135deg, white, #ffc3df);
      border: solid 3px #FF469D;
      border-radius: 8px;
      color: #1C1C1E;
@@ -63,25 +55,60 @@ background: linear-gradient(135deg, white, #ffc3df);
      transform: translateY(50px);
      animation: fadeInUp 0.6s ease forwards;
 }
-
-.faq__box:nth-child(2) {
-     animation-delay: 0.2s;
+.faq__box:hover {
+          background: linear-gradient(135deg, white, #ff9dcb);
+               box-shadow: 0 5px 10px rgba(255, 70, 157, 0.4);
 }
 
-.faq__box:nth-child(3) {
-     animation-delay: 0.4s;
+/* Медиазапросы */
+
+@media screen and (max-width: 1024px) {
+     .faq__container {
+          gap: 15px;
+          padding: 15px;
+     }
+
+     .faq__container img {
+          max-width: 60%;
+          /* Немного уменьшить изображение */
+     }
+
+     .faq__box {
+          font-size: 15px;
+          /* Уменьшение текста */
+     }
 }
 
-.faq__box:nth-child(4) {
-     animation-delay: 0.6s;
+@media screen and (max-width: 768px) {
+     .faq__container {
+          flex-direction: column;
+          /* Колонка для мобильных */
+          gap: 10px;
+     }
+
+     .faq__container img {
+          max-width: 80%;
+          /* Изображение меньше */
+     }
+
+     .faq__box {
+          font-size: 14px;
+          max-width: 90%;
+     }
 }
 
-.faq__box:nth-child(5) {
-     animation-delay: 0.8s;
-}
+@media screen and (max-width: 480px) {
+  
+     .faq__container img {
+          max-width: 100%;
+          /* Максимально адаптируется */
+     }
 
-.faq__box:nth-child(6) {
-     animation-delay: 1s;
+     .faq__box {
+          font-size: 13px;
+          padding: 10px;
+          /* Добавляем внутренний отступ для удобства */
+     }
 }
 
 /* Анимации */

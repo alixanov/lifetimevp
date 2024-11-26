@@ -1,20 +1,3 @@
-* {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
-     text-decoration: none;
-}
-
-body {
-     height: 100vh;
-     display: flex;
-     flex-direction: column;
-     background: linear-gradient(135deg, #1C1C1E, #FF469D);
-     font-family: 'Arial', sans-serif;
-     color: white;
-     overflow: hidden;
-}
-
 .contact__container {
      display: flex;
      align-items: center;
@@ -27,7 +10,7 @@ body {
 }
 
 .contact__card {
-     width: 600px;
+     width: 100%;
      height: 300px;
      background: rgba(255, 255, 255, 0.1);
      border: 2px solid rgba(255, 255, 255, 0.2);
@@ -44,6 +27,8 @@ body {
      align-items: center;
      justify-content: center;
      gap: 20px;
+     flex-wrap: wrap;
+     /* Для адаптации */
 }
 
 .contact__social {
@@ -105,5 +90,57 @@ body {
      100% {
           transform: scale(1);
           opacity: 1;
+     }
+}
+
+/* Медиазапросы */
+
+/* Для экранов 1024px и меньше */
+@media screen and (max-width: 1024px) {
+     .contact__card {
+          height: 250px;
+     }
+
+     .contact__social {
+          width: 45px;
+          height: 45px;
+     }
+
+     .contact__box {
+          gap: 15px;
+     }
+}
+
+/* Для экранов 768px и меньше */
+@media screen and (max-width: 768px) {
+     .contact__card {
+          height: 200px;
+          padding: 10px;
+     }
+
+     .contact__social {
+          width: 40px;
+          height: 40px;
+     }
+
+     .contact__box {
+          gap: 10px;
+     }
+}
+
+/* Для экранов 480px и меньше */
+@media screen and (max-width: 480px) {
+     .contact__card {
+          height: auto;
+          padding: 10px;
+     }
+
+     .contact__social {
+          width: 35px;
+          height: 35px;
+     }
+
+     .contact__box {
+          gap: 10px;
      }
 }
