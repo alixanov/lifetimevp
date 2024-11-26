@@ -1,0 +1,132 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     text-decoration: none;
+}
+
+body {
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     background: linear-gradient(135deg,black, black);
+     font-family: Arial, sans-serif;
+}
+
+.features__container {
+     width: 100%;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     padding: 20px;
+     gap: 22px;
+}
+
+/* Карточки */
+.features__card,
+.features__ad-card {
+     width: 90%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     background-color:black;
+     gap: 22px;
+     padding: 20px;
+     border-radius: 20px;
+     border: solid 3px #FF469D;
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features__card:hover,
+.features__ad-card:hover {
+     transform: translateY(-10px);
+     box-shadow: 0 20px 30px rgba(255, 70, 157, 0.4);
+}
+
+/* Заголовки */
+.features__card>p,
+.features__ad-card>p {
+     color: white;
+     font-size: 28px;
+     text-align: center;
+     animation: pulse 2s infinite;
+}
+
+.features__card>p>span,
+.features__ad-card>p>span {
+     color: #4DEA03;
+     font-weight: bold;
+}
+
+/* Анимация заголовка */
+@keyframes pulse {
+
+     0%,
+     100% {
+          transform: scale(1);
+     }
+
+     50% {
+          transform: scale(1.05);
+     }
+}
+
+/* Кнопки */
+.features__btn {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 11px;
+}
+
+.features__btn>button {
+     width: 150px;
+     height: 40px;
+     background: linear-gradient(135deg, #FF469D, #4DEA03);
+     color: white;
+     font-weight: bold;
+     border: none;
+     border-radius: 16px;
+     cursor: pointer;
+     transition: transform 0.2s ease, box-shadow 0.3s ease;
+     overflow: hidden;
+     position: relative;
+}
+
+.features__btn>button:hover {
+     transform: scale(1.1);
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Эффект волны */
+.features__btn>button::before {
+     content: '';
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     width: 0;
+     height: 0;
+     background: rgba(255, 255, 255, 0.4);
+     border-radius: 50%;
+     transform: translate(-50%, -50%);
+     transition: width 0.6s ease, height 0.6s ease;
+     z-index: 0;
+}
+
+.features__btn>button:hover::before {
+     width: 300px;
+     height: 300px;
+}
+
+/* Текст на кнопках */
+.features__btn>button span {
+     position: relative;
+     z-index: 1;
+}
+
+/* Анимация при нажатии */
+.features__btn>button:active {
+     transform: scale(0.9);
+}

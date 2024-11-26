@@ -1,0 +1,97 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     text-decoration: none;
+}
+
+body {
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background: linear-gradient(135deg, #1C1C1E, #FF469D);
+     font-family: 'Arial', sans-serif;
+     color: white;
+     overflow-x: hidden;
+}
+
+.money__container {
+     width: 80%;
+     max-width: 600px;
+     text-align: center;
+     padding: 30px;
+     background: rgba(255, 255, 255, 0.1);
+     /* Полупрозрачный фон */
+     border: 2px solid #FF469D;
+     border-radius: 20px;
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+     transform: scale(0.8);
+     opacity: 0;
+     animation: fadeInScale 1.2s ease forwards;
+}
+
+.money__container p {
+     font-size: 24px;
+     font-weight: bold;
+     margin-bottom: 15px;
+     background: linear-gradient(90deg, #FF469D, #4DEA03);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     /* Градиентный текст */
+     animation: textGlow 2s infinite alternate;
+}
+
+.money__container span {
+     display: block;
+     font-size: 16px;
+     color: rgba(255, 255, 255, 0.8);
+     margin-top: 10px;
+     line-height: 1.6;
+     transform: translateY(20px);
+     opacity: 0;
+     animation: fadeInUp 0.8s ease forwards;
+}
+
+.money__container span:nth-child(2) {
+     animation-delay: 0.3s;
+}
+
+.money__container span:nth-child(3) {
+     animation-delay: 0.5s;
+}
+
+/* Анимации */
+@keyframes fadeInScale {
+     0% {
+          transform: scale(0.8);
+          opacity: 0;
+     }
+
+     100% {
+          transform: scale(1);
+          opacity: 1;
+     }
+}
+
+@keyframes fadeInUp {
+     0% {
+          transform: translateY(20px);
+          opacity: 0;
+     }
+
+     100% {
+          transform: translateY(0);
+          opacity: 1;
+     }
+}
+
+@keyframes textGlow {
+     0% {
+          text-shadow: 0 0 5px #FF469D, 0 0 10px #FF469D, 0 0 20px #FF469D;
+     }
+
+     100% {
+          text-shadow: 0 0 10px #4DEA03, 0 0 20px #4DEA03, 0 0 30px #4DEA03;
+     }
+}
