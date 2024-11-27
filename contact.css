@@ -3,6 +3,7 @@
      align-items: center;
      justify-content: center;
      flex-direction: column;
+     
      gap: 20px;
      padding: 40px;
      background: linear-gradient(135deg, #f9f9f9, #f1f4ff);
