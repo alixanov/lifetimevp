@@ -7,32 +7,47 @@
      flex-direction: column;
      padding: 20px;
      gap: 22px;
-   
+   background-color: white;
 }
 
 /* Карточки */
-.features__card,
+.features__card{
+     width: 90%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     background-color: #040029;
+     gap: 22px;
+     padding: 20px;
+     border-radius: 20px;
+border: solid 2px #FF469D;
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 .features__ad-card {
      width: 90%;
      display: flex;
      align-items: center;
      justify-content: center;
      flex-direction: column;
-   background-color: black;
+     background-color: white;
      gap: 22px;
      padding: 20px;
      border-radius: 20px;
-     border: solid 3px #FF469D;
+     border: solid 2px #FF469D;
      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
      transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .features__card:hover,
 .features__ad-card:hover {
-     transform: translateY(-10px);
-     box-shadow: 0 20px 30px rgba(255, 70, 157, 0.4);
+     transform: translateY(-5px);
+     /* Меньший сдвиг */
+     box-shadow: 0 10px 15px rgba(255, 70, 157, 0.3);
+     /* Легкая тень с меньшей интенсивностью */
+     transition: transform 0.2s ease, box-shadow 0.2s ease;
+     /* Плавный переход */
 }
-
 /* Заголовки */
 .features__card>p,
 .features__ad-card>p {
@@ -70,59 +85,46 @@
 }
 .features__btn>button {
      width: 160px;
-     /* Немного шире для лучшего UX */
      height: 40px;
-     /* Увеличена высота для современного ощущения */
-     background-color: #fff;
-     /* Минималистичный белый */
-     color: #222;
-     /* Глубокий темный цвет текста */
-     font-weight: 600;
-     /* Немного больше акцента */
-     font-size: 15px;
-     /* Чуть больше для улучшенной читаемости */
-     border: 1px solid rgba(0, 0, 0, 0.1);
-     /* Светлая, ненавязчивая граница */
-     border-radius: 16px;
-     /* Больше радиуса для модного скругления */
+     background-color: #f8f8f8;
+     /* Нейтральный светлый фон */
+     color: #333;
+     /* Четкий текст */
+     font-weight: 500;
+     /* Легкий акцент */
+     font-size: 14px;
+     /* Стандартный размер */
+     border: 1px solid #221246;
+     /* Тонкая светлая рамка */
+     border-radius: 8px;
+     /* Умеренно скругленные углы */
      cursor: pointer;
-     transition: all 0.25s ease;
-     /* Универсальный и плавный переход */
-     padding: 12px 20px;
+     transition: background-color 0.2s ease, color 0.2s ease;
      display: flex;
      align-items: center;
      justify-content: center;
-     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-     /* Едва заметная тень */
+     padding: 0 16px;
 }
 
 .features__btn>button:hover {
-     background-color: #e5e5e5;
-     /* Светло-серый, более мягкий эффект */
-     color: #333;
-     /* Более глубокий цвет */
-     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-     /* Более выразительная тень */
-     border: 1px solid #ff98c8;
-     /* Акцентированный цвет для границы */
+     background-color: #eaeaea;
+     /* Легкий эффект при наведении */
+     color: #111;
+     /* Немного темнее текст */
 }
 
 .features__btn>button:active {
-     transform: scale(0.96);
-     /* Легкое уменьшение */
-     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-     /* Более выраженное сжатие тени */
-     background-color: #f0f0f0;
-     /* Немного темнее для клика */
-     color: #111;
-     /* Более насыщенный цвет текста */
+     background-color: #ddd;
+     /* Четкое изменение при клике */
+     color: #000;
+     /* Максимальная контрастность текста */
+     transform: scale(0.98);
+     /* Едва заметное уменьшение */
 }
 
 .features__btn>button span {
-     position: relative;
-     font-weight: 600;
-     /* Чуть более жирный текст */
-     z-index: 1;
+     font-weight: 500;
+     /* Минимализм в стиле */
 }
 @media (max-width: 480px) {
 /* .features__container {

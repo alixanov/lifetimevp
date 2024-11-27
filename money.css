@@ -13,6 +13,7 @@
      animation: fadeInScale 1.2s ease forwards;
      margin: 20px auto;
      /* Для центрирования */
+     border-radius: 20px;
 }
 
 .money__container p {
