@@ -3,17 +3,15 @@
      background-color: white;
 }
 .money__container {
-     width: 97%;
+     width: 100%;
      /* max-width: 600px; */
      text-align: center;
-     padding: 30px;
           background-color: #040029;     /* Полупрозрачный фон */
      transform: scale(0.8);
      opacity: 0;
      animation: fadeInScale 1.2s ease forwards;
-     margin: 20px auto;
      /* Для центрирования */
-     border-radius: 20px;
+   padding: 20px;
 }
 
 .money__container p {
