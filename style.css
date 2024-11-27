@@ -85,7 +85,7 @@ body {
      width: 340px;
      padding: 10px;
      border-radius: 16px;
-    background-color: black;
+    background-color: #231247;
      border: 2px solid rgba(255, 255, 255, 0.3);
      backdrop-filter: blur(10px);
      animation: slideInLeft 1s ease;
