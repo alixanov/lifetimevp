@@ -97,7 +97,7 @@
 /* Для экранов 768px и меньше */
 @media screen and (max-width: 768px) {
      .money__container {
-          width: 95%;
+          width: 100%;
           padding: 15px;
      }
 
