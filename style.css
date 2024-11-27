@@ -193,7 +193,7 @@ body {
 .form__img>img {
      width: 300px;
      position: absolute;
-          top: 160px;
+          top: 251px;
           right: 0;
      animation: slideInRight 1s ease;
 }
