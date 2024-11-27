@@ -49,16 +49,28 @@
      /* Плавный переход */
 }
 /* Заголовки */
-.features__card>p,
-.features__ad-card>p {
+.features__card>p{
      color: white;
      font-size: 28px;
      text-align: center;
      animation: pulse 2s infinite;
 }
 
+.features__ad-card>p {
+     color: black;
+     font-size: 28px;
+     text-align: center;
+     animation: pulse 2s infinite;
+}
+.features__title {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 30px;
+}
+
 .features__card>p>span,
-.features__ad-card>p>span {
+.features__title > span {
      color: #4DEA03;
      font-weight: bold;
      font-size: 44px;
@@ -137,4 +149,21 @@ margin-top: 300px;
 .features__btn>button {
      width: 80px;
      height: 35px; }
+
+          .features__title {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               gap: 10px;
+          }
+
+          .features__title > img {
+               width: 180px;
+          }
+          .features__card>p>span,
+          .features__title>span {
+               color: #4DEA03;
+               font-weight: bold;
+               font-size: 33px;
+          }
 }
