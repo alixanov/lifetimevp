@@ -110,6 +110,7 @@
      }
 }
 
+
 /* Для экранов 480px и меньше */
 @media screen and (max-width: 480px) {
      .money__container {
