@@ -63,14 +63,14 @@
 .faq__box:nth-child(odd) {
      align-self: flex-start;
      /* Карточки с нечетным индексом ближе к левому краю */
-     margin-left: 10px;
+     margin-left: 15px;
      /* Смещение влево */
 }
 
 .faq__box:nth-child(even) {
      align-self: flex-end;
      /* Карточки с четным индексом ближе к правому краю */
-     margin-right: 10px;
+     margin-right: -5px;
      /* Смещение вправо */
 }
 
