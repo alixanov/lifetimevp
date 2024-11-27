@@ -29,38 +29,54 @@
      max-width: 500px;
      display: flex;
      flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     gap: 22px;
+     /* Колонка */
+     align-items: flex-start;
+     /* Выравнивание по левому краю */
+     justify-content: flex-start;
+     gap: 15px;
+     /* Общий разрыв между карточками */
      width: 100%;
-
-     /* Адаптируется для мобильных */
 }
+
 .faq__box {
      width: 100%;
-     /* Динамическая ширина */
-     max-width: 500px;
-     /* Максимальная ширина */
+     max-width: 400px;
+     /* Оптимальная ширина */
      min-height: 50px;
      display: flex;
      align-items: center;
      justify-content: center;
      flex-direction: column;
-  background-color: white;
-     /* Слегка нежный розовый */
+     background-color: white;
      border: solid 2px #040029;
-     /* Уменьшена толщина границы */
      border-radius: 8px;
      color: #333;
-     /* Более темный текст для контраста */
      text-align: center;
      font-size: 16px;
      line-height: 1.4;
      opacity: 0;
      transform: translateY(50px);
      animation: fadeInUp 0.6s ease forwards;
-cursor: pointer;
-     
+     cursor: pointer;
+}
+
+.faq__box:nth-child(odd) {
+     align-self: flex-start;
+     /* Карточки с нечетным индексом ближе к левому краю */
+     margin-left: 10px;
+     /* Смещение влево */
+}
+
+.faq__box:nth-child(even) {
+     align-self: flex-end;
+     /* Карточки с четным индексом ближе к правому краю */
+     margin-right: 10px;
+     /* Смещение вправо */
+}
+
+.faq__box:last-child {
+     align-self: center;
+     /* Последняя карточка в центре */
 }
 
 .faq__box:hover {
