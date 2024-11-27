@@ -1,7 +1,4 @@
-.money__big-container {
-     width: 100%;
-     background-color: white;
-}
+
 .money__container {
      width: 100%;
      /* max-width: 600px; */
@@ -116,9 +113,9 @@
 /* Для экранов 480px и меньше */
 @media screen and (max-width: 480px) {
      .money__container {
-          width: 85%;
+       
           padding: 20px;
-          border-radius: 15px;
+    
      }
 
      .money__container p {
