@@ -75,7 +75,7 @@
 }
 
 .faq__box:last-child {
-     align-self: center;
+     align-self: flex-end;
      /* Последняя карточка в центре */
 }
 

@@ -12,6 +12,7 @@ body {
      font-family: 'Arial', sans-serif;
      /* overflow: hidden; */
      scroll-behavior: smooth;
+     max-width: 1440px;
 
 }
 
@@ -20,6 +21,7 @@ body {
      display: flex;
      flex-direction: column;
      background-color: black;
+  
 }
 
 .header__container {

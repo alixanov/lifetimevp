@@ -3,7 +3,7 @@
      align-items: center;
      justify-content: center;
      flex-direction: column;
-     
+
      gap: 20px;
      padding: 40px;
      background: linear-gradient(135deg, #f9f9f9, #f1f4ff);
@@ -37,6 +37,8 @@
 
 .contact__card input,
 .contact__card textarea {
+     max-width: 460px;
+     max-height: 140px;
      width: 100%;
      padding: 12px;
      border: 1px solid #ddd;
@@ -133,6 +135,8 @@
 
      .contact__card input,
      .contact__card textarea {
+          max-width: 310px;
+          max-height: 100px;
           font-size: 13px;
      }
 
