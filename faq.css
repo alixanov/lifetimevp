@@ -46,7 +46,7 @@
      align-items: center;
      justify-content: center;
      flex-direction: column;
-     background: linear-gradient(135deg, white, #d6d2f6);
+  background-color: white;
      /* Слегка нежный розовый */
      border: solid 2px #040029;
      /* Уменьшена толщина границы */
@@ -69,6 +69,7 @@ cursor: pointer;
      /* Слабая тень для современности */
      transition: background 0.3s ease, box-shadow 0.3s ease;
      /* Плавные переходы */
+     background-color: #efecff;
 }
 
 .faq__box:active {
